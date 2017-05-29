@@ -4,7 +4,7 @@ import numpy as np
 img = cv2.imread('./images/IMG.jpg')
 rows, cols = img.shape[:2]	# row, column, channel
 
-kernel_identity = np.array([ [0, 0, 0], [0, 1, 0], [0, 0, 0] ]_
+kernel_identity = np.array([ [0, 0, 0], [0, 1, 0], [0, 0, 0] ])
 kernel_3x3 = np.ones((3, 3), np.float32) / 9.0	# normalization
 kernel_5x5 = np.ones((5, 5), np.float32) / 25.0	# normalization
 
