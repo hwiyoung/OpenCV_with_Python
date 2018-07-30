@@ -37,14 +37,20 @@ if __name__=='__main__':
 	gray_img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 	gray_img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
-    #img1 = cv2.imread(sys.argv[1], 0)   # query image (rotated subregion)
-    #img2 = cv2.imread(sys.argv[2], 0)   # train image (full image)
-
     # Initialize ORB detector
 	orb = cv2.ORB_create()
 
     # Extract keypoints and descriptors
 	keypoints1, descriptors1 = orb.detectAndCompute(gray_img1, None)
+	'''
+	print(keypoints1[0].pt)
+	print(keypoints1[0].size)
+	print(keypoints1[0].angle)
+	print(keypoints1[0].response)
+	print(keypoints1[0].octave)
+	print(keypoints1[0].class_id)
+	'''
+	
 	keypoints2, descriptors2 = orb.detectAndCompute(gray_img2, None)
 
     # Create Brute Force matcher object
@@ -59,11 +65,6 @@ if __name__=='__main__':
     # Draw first 'n' matches
 	img3 = draw_matches(gray_img1, keypoints1, gray_img2, keypoints2, matches[:30])
 	
-	#cv2.imshow('Matched keypoints', img3)
-	#cv2.imshow('Matched keypoints1', outImg)
-	#cv2.waitKey()
 	plt.figure(1)
-	plt.imshow(img3, aspect='equal')
-	plt.figure(2)
-	plt.imshow(img3, aspect='equal')
+	plt.imshow(img3, aspect='equal')	
 	plt.show()
