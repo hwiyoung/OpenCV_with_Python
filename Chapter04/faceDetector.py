@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 #face_cascade = cv2.CascadeClassifier('./cascade_files/haarcascade_frontalface_default.xml')
-face_cascade = cv2.CascadeClassifier('C:/Users/Hwiyoung/Anaconda3/pkgs/opencv-3.2.0-np111py36_201/Library/etc/haarcascades/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('C:\Python\Python366\Lib\site-packages\cv2\data/haarcascade_frontalface_default.xml')
 
 '''
 # in case of Video
