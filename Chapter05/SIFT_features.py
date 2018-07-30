@@ -11,7 +11,8 @@ keypoints = sift.detect(gray_image, None)
 output_image = cv2.drawKeypoints(input_image, keypoints, output_image, flags=cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
 
 cv2.imshow('SIFT features', output_image)
-cv2.waitKey()
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 ######
 

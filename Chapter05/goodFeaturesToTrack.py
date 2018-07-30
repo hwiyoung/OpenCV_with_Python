@@ -18,4 +18,5 @@ for item in corners:
     cv2.circle(img, (x,y), 5, 255, -1)
 
 cv2.imshow("Top 'k' features", img)
-cv2.waitKey()
+cv2.waitKey(0)
+cv2.destroyAllWindows()

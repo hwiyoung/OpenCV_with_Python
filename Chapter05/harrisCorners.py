@@ -9,7 +9,7 @@ gray = np.float32(gray)
 # for the polygon image
 #dst = cv2.cornerHarris(gray,4,5,0.02)
 
-# for the box image 
+# for the box image
 dst = cv2.cornerHarris(gray,4,5,0.04)       # limited corners
 # params
 #	gray: image to detect corners
@@ -27,4 +27,5 @@ dst = cv2.dilate(dst,None)
 img[dst>0.01*dst.max()]=[0,0,255]
 
 cv2.imshow('Harris Corners',img)
-cv2.waitKey()
+cv2.waitKey(0)
+cv2.destroyAllWindows()
